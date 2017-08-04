@@ -33,7 +33,6 @@ func pkgvers() (ret map[string]string) {
 	}
 	for _, line := range strings.Split(strings.Trim(string(out), "\n"), "\n") {
 		words := strings.Split(line, " ")
-		log.Println(words)
 		ret[words[0]] = words[1]
 	}
 	return ret
